@@ -126,6 +126,12 @@ body {
 					align-content: start;
 					padding: 5px;
 
+					.fieldNote{
+						font-size: 1 rem;
+						margin: 5px 0 0 5px;
+						color: rgb(226, 194, 134);
+					}
+
 					label {
 						&:after {
 							content: ":";

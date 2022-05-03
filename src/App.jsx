@@ -159,6 +159,7 @@ function App() {
 								type="text"
 								id="login2"
 							/>
+							{fieldLogin.trim().length===0 && <div className="fieldNote">required</div>}
 						</div>
 						<div className="row">
 							<label htmlFor="password">Password</label>
@@ -168,9 +169,10 @@ function App() {
 								type="password"
 								id="password"
 							/>
+							{fieldPassword.trim().length===0 && <div className="fieldNote">required</div>}
 						</div>
 						<div className="buttonRow">
-							<button onClick={handleSubmitButton}>Enter</button>
+							<button disabled={fieldLogin.trim().length===0 || fieldPassword.trim().length===0} onClick={handleSubmitButton}>Enter</button>
 						</div>
 					</fieldset>
 				</form>
